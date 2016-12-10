@@ -41,7 +41,7 @@ public class HubClient {
                 NBPArrayOfExchangeRatesTable output = response.getEntity(NBPArrayOfExchangeRatesTable.class);
                 nbpService.setRatesTable(output);
             } else {
-                System.out.println("Error..!");
+                System.out.println("NBP Client Error..!");
             }
 
         } catch (Exception e) {
@@ -66,7 +66,7 @@ public class HubClient {
                 xchangeService.setRates(ecbService.getEcbRate().getECBRates(), nbpService.getRatesTable());
 
             } else {
-                System.out.println("Error..!");
+                System.out.println("ECB CLient Error..!");
             }
 
         } catch (Exception e) {
